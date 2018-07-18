@@ -6,7 +6,7 @@ import com.example.jinliyu.comcast.data.model.WireCharacter;
 /**
  * Contract interface for View and Presenter
  */
-public interface ItemsListContract {
+interface ItemsListContract {
 
     interface IView{
          void initSimpsonsRecyclerView(SimpsonsCharacter simpsonsCharacter);

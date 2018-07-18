@@ -52,7 +52,6 @@ public class ItemsListFragment extends Fragment implements  CharacterAdapter.Rec
 
     @Subscribe
     public void onEvent(String type) {
-        Log.i("eventbus",   "received");
         layoutType = type;
         itemListPresenter.getDataFromServer();
 
@@ -96,7 +95,6 @@ public class ItemsListFragment extends Fragment implements  CharacterAdapter.Rec
     @Override
     public void initWireRecyclerView(WireCharacter wireCharacter) {
         topicsBeanList = wireCharacter.getRelatedTopics();
-        List<WireCharacter.RelatedTopicsBean> checklist = (List<WireCharacter.RelatedTopicsBean>) topicsBeanList;
         CharacterAdapter characterAdapter = new CharacterAdapter(getContext(), (List<Object>) topicsBeanList, layoutType, ItemsListFragment.this);
 
         if (layoutType.equals("linear")) {

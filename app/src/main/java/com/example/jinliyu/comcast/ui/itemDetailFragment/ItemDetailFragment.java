@@ -2,6 +2,7 @@ package com.example.jinliyu.comcast.ui.itemDetailFragment;
 
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -64,14 +65,18 @@ private TextView detailTextView;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail,
                 container, false);
         imageView = view.findViewById(R.id.character_image);
         detailTextView = view.findViewById(R.id.detail_textview);
+
         Bundle bundle = getArguments();
-        characterText = bundle.getString("text");
-        iconUrl = bundle.getString("url");
+        if (bundle != null) {
+            characterText = bundle.getString("text");
+            iconUrl = bundle.getString("url");
+        }
+
         initItemDetail();
 
         return view;

@@ -1,7 +1,6 @@
 package com.example.jinliyu.comcast.data.network;
 
 import com.example.jinliyu.comcast.BuildConfig;
-import com.example.jinliyu.comcast.data.network.ApiService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

@@ -33,10 +33,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     /**
      *
-     * @param context
-     * @param topicsBeanList
-     * @param layoutType
-     * @param listener
+     * @param context context
+     * @param topicsBeanList character data
+     * @param layoutType grid or linear
+     * @param listener listener for passing data
      */
     public CharacterAdapter(Context context, List<Object> topicsBeanList, String layoutType, RecyclerViewClickListener listener) {
         this.context = context;
