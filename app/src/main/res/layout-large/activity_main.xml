@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/item_list"
-        android:name="com.example.jinliyu.comcast.ui.ItemsListFragment.ItemsListFragment"
+        android:name="com.example.jinliyu.comcast.ui.itemsListFragment.ItemsListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1.5"

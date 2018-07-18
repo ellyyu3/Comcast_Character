@@ -34,6 +34,7 @@ android {
             )
             buildConfigField("String", "FLAVOR_TYPE", "\"Simpson\"")
             buildConfigField('boolean', 'IS_SIMPSON', 'true')
+            resValue "string", "app_name", "Simpsons Character"
 
         }
 
@@ -46,6 +47,7 @@ android {
             )
             buildConfigField("String", "FLAVOR_TYPE", "\"Wire\"")
             buildConfigField('boolean', 'IS_SIMPSON', 'false')
+            resValue "string", "app_name", "Wire Character"
 
         }
 

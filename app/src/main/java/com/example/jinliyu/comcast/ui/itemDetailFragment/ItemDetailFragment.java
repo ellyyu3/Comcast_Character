@@ -1,4 +1,4 @@
-package com.example.jinliyu.comcast.ui.ItemDetailFragment;
+package com.example.jinliyu.comcast.ui.itemDetailFragment;
 
 
 import android.os.Bundle;
@@ -19,6 +19,9 @@ import com.example.jinliyu.comcast.R;
 import com.example.jinliyu.comcast.data.model.SimpsonsCharacter;
 import com.example.jinliyu.comcast.data.model.WireCharacter;
 
+/**
+ *  fragment for display character item details
+ */
 public class ItemDetailFragment extends Fragment implements ItemDetailFragmentContract.IView{
 private String characterText;
 private String iconUrl;

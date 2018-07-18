@@ -1,18 +1,21 @@
-package com.example.jinliyu.comcast.ui.ItemsListFragment;
+package com.example.jinliyu.comcast.ui.itemsListFragment;
 
 import android.support.annotation.NonNull;
+import android.widget.Toast;
 
 import com.example.jinliyu.comcast.BuildConfig;
 import com.example.jinliyu.comcast.data.model.SimpsonsCharacter;
 import com.example.jinliyu.comcast.data.model.WireCharacter;
 import com.example.jinliyu.comcast.data.network.ApiService;
 import com.example.jinliyu.comcast.data.network.RetrofitInstance;
-import com.example.jinliyu.comcast.ui.ItemsListFragment.ItemsListContract;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * presenter of ItemsListFragment, for communication between Model and View
+ */
 public class ItemsListPresenter implements ItemsListContract.IPresenter {
 private ItemsListContract.IView itemListFragment;
 
@@ -35,10 +38,9 @@ private ItemsListContract.IView itemListFragment;
                            }
 
                        }
-
                        @Override
                        public void onFailure(@NonNull Call<SimpsonsCharacter> call, @NonNull Throwable t) {
-
+                           itemListFragment.showErrorToast();
                        }
                    });
                } else {
@@ -52,7 +54,7 @@ private ItemsListContract.IView itemListFragment;
 
                        @Override
                        public void onFailure(@NonNull Call<WireCharacter> call, @NonNull Throwable t) {
-
+                           itemListFragment.showErrorToast();
                        }
                    });
 

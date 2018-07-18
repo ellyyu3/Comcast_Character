@@ -12,6 +12,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.jinliyu.comcast.R;
 
+/**
+ *  Activity to display character detail
+ */
 public class DetailActivity extends AppCompatActivity implements DetailActivityContract.IView{
 private ImageView imageView;
 private TextView textView;

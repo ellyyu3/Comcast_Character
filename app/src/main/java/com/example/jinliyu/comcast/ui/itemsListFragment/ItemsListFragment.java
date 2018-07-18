@@ -1,4 +1,4 @@
-package com.example.jinliyu.comcast.ui.ItemsListFragment;
+package com.example.jinliyu.comcast.ui.itemsListFragment;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.jinliyu.comcast.BuildConfig;
 import com.example.jinliyu.comcast.R;
@@ -24,6 +25,9 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
 
+/**
+ *  fragment to display character name list
+ */
 public class ItemsListFragment extends Fragment implements  CharacterAdapter.RecyclerViewClickListener, ItemsListContract.IView {
 
     private RecyclerView recyclerView;
@@ -108,6 +112,11 @@ public class ItemsListFragment extends Fragment implements  CharacterAdapter.Rec
         void onItemClicked(Object item);
     }
 
+    @Override
+    public void showErrorToast(){
+        Toast.makeText(getContext(), "Please check internet connection", Toast.LENGTH_SHORT).show();
+
+    }
 
 
 

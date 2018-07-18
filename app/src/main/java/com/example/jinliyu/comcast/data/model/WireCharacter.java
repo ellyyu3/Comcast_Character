@@ -2,6 +2,9 @@ package com.example.jinliyu.comcast.data.model;
 
 import java.util.List;
 
+/**
+ * Wire character data model class
+ */
 public class WireCharacter {
 
     private List<WireCharacter.RelatedTopicsBean> RelatedTopics;

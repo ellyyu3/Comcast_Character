@@ -3,7 +3,6 @@ package com.example.jinliyu.comcast.ui.main;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,8 +11,8 @@ import android.widget.FrameLayout;
 import android.widget.Switch;
 
 import com.example.jinliyu.comcast.BuildConfig;
-import com.example.jinliyu.comcast.ui.ItemDetailFragment.ItemDetailFragment;
-import com.example.jinliyu.comcast.ui.ItemsListFragment.ItemsListFragment;
+import com.example.jinliyu.comcast.ui.itemDetailFragment.ItemDetailFragment;
+import com.example.jinliyu.comcast.ui.itemsListFragment.ItemsListFragment;
 import com.example.jinliyu.comcast.data.model.SimpsonsCharacter;
 import com.example.jinliyu.comcast.data.model.WireCharacter;
 import com.example.jinliyu.comcast.ui.detailActivity.DetailActivity;
@@ -21,6 +20,9 @@ import com.example.jinliyu.comcast.R;
 
 import org.greenrobot.eventbus.EventBus;
 
+/**
+ *  Homescreen to display data
+ */
 public class MainActivity extends AppCompatActivity implements ItemsListFragment.ItemClickListener{
     private boolean isLargeScreen = false;
     private String layoutType = "linear";
@@ -53,40 +55,15 @@ public class MainActivity extends AppCompatActivity implements ItemsListFragment
             toggle.setVisibility(View.VISIBLE);
         }
         toggle.setChecked(false);
-
-
-//        toggle.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (toggle.isChecked()) {
-//                    layoutType = "grid";
-//                    toggle.setChecked(false);
-//                    EventBus.getDefault().post(layoutType);
-//                } else {
-//                    layoutType = "linear";
-//                    toggle.setChecked(true);
-//
-//                    EventBus.getDefault().post(layoutType);
-//                }
-//            }
-//
-//        });
-//        return true;
-//    }
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                Log.i("eventbus",   "triggered");
-
                 if (isChecked) {
-                    Log.i("eventbus",   "post");
-
                     layoutType = "grid";
                     EventBus.getDefault().post(layoutType);
 
                 } else {
-                    Log.i("eventbus",   "post");
                     layoutType = "linear";
                     EventBus.getDefault().post(layoutType);
 

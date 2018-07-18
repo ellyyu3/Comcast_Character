@@ -1,13 +1,17 @@
-package com.example.jinliyu.comcast.ui.ItemsListFragment;
+package com.example.jinliyu.comcast.ui.itemsListFragment;
 
 import com.example.jinliyu.comcast.data.model.SimpsonsCharacter;
 import com.example.jinliyu.comcast.data.model.WireCharacter;
 
+/**
+ * Contract interface for View and Presenter
+ */
 public interface ItemsListContract {
 
     interface IView{
          void initSimpsonsRecyclerView(SimpsonsCharacter simpsonsCharacter);
          void initWireRecyclerView(WireCharacter wireCharacter);
+         void showErrorToast();
     }
 
     interface IPresenter{

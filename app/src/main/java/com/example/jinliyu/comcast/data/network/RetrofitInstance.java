@@ -9,11 +9,20 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ *  Network class to pass base_url and return retrofit instance
+ *
+ */
 public class RetrofitInstance {
 
     private static final String BASE_URL = BuildConfig.BaseURL;
 
     private static Retrofit retrofit = null;
+
+    /**
+     *
+     * @return retrofit instance
+     */
 
     public static Retrofit getRetrofitInstance() {
 

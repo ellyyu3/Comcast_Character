@@ -2,6 +2,9 @@ package com.example.jinliyu.comcast.data.model;
 
 import java.util.List;
 
+/**
+ * Simpsons character data model class
+ */
 public class SimpsonsCharacter {
 
     private List<SimpsonsCharacter.RelatedTopicsBean> RelatedTopics;

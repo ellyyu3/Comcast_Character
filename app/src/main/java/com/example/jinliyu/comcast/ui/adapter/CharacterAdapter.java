@@ -21,6 +21,9 @@ import com.example.jinliyu.comcast.data.model.WireCharacter;
 
 import java.util.List;
 
+/**
+ *  Adapter to hold simpsons and wire data
+ */
 public class CharacterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
    private final List<Object> topicsBeanList;
@@ -28,6 +31,13 @@ public class CharacterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
    private final RecyclerViewClickListener listener;
    private final String layoutType;
 
+    /**
+     *
+     * @param context
+     * @param topicsBeanList
+     * @param layoutType
+     * @param listener
+     */
     public CharacterAdapter(Context context, List<Object> topicsBeanList, String layoutType, RecyclerViewClickListener listener) {
         this.context = context;
         this.topicsBeanList = topicsBeanList;
@@ -116,7 +126,9 @@ public class CharacterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         }
 
 
-
+    /**
+     *   ViewHolder for list layout
+     */
         class MyViewHolder extends RecyclerView.ViewHolder {
 
             final TextView textView;
@@ -134,7 +146,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             }
         }
 
-        class GridViewHolder extends RecyclerView.ViewHolder {
+    /**
+     * ViewHolder for grid layout
+     */
+    class GridViewHolder extends RecyclerView.ViewHolder {
 
             final ImageView imageView;
 
