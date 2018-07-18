@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Comcast</string>
+    <string name="item_detail_image">item detail image</string>
+    <string name="grid_layout_image">grid layout image</string>
+</resources>
